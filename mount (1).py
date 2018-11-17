@@ -1,6 +1,6 @@
 # /etc/init.d/mount.py
 ### BEGIN INIT INFO
-# Provides:          sample.py
+# Provides:          mount(1).py
 # Required-Start:    $remote_fs $syslog
 # Required-Stop:     $remote_fs $syslog
 # Default-Start:     2 3 4 5
