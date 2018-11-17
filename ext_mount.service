@@ -1,0 +1,10 @@
+[Unit]
+ Description=External Mounting Service
+ After=multi-user.target
+
+[Service]
+ Type=idle
+ ExecStart=/usr/bin/python /home/pi/mount.py > /home/pi/mount.log 2>&1
+
+[Install]
+ WantedBy=multi-user.target
