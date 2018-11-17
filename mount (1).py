@@ -15,7 +15,7 @@ import os
 import time
 
 INTERVAL = 120000
-#INTERVAL=30000
+
 def millis():
   return int(round(time.time() * 1000))
 
@@ -24,7 +24,7 @@ def millis():
 previous=millis()
 
 
-#mp = '//192.168.1.1/Media'
+
 mp ='/mnt/Media'
 if os.path.ismount(mp):
     print('{0} is mounted'.format(mp))
@@ -35,9 +35,9 @@ else:
     print('{0} is NOT mounted'.format(mp))
     while True:
         current=millis()
-        #print(current)
+        
         differ=current - previous
-        #print(differ)
+       
         time.sleep(10)
         print('reboooting')
         os.system('echo "Ext mount has failed will Reboot in a few minitues"| wall')
@@ -49,14 +49,4 @@ else:
     
     
     
-    # while True:
-    #  differ=current - previous
-    #  time.sleep(1000)
-    #  os.system('echo "Reboot in a few minitues| wall')
-    #     if differ >= interval :
-    #         previous=millis()
-    #         os.system('echo "Rebooting.....| wall')
-        
-
     
-    #os.system('"This is a test." | wall')
